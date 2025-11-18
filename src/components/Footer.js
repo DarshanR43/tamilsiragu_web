@@ -14,7 +14,7 @@ export default function Footer() {
 
   const socialLinks = [
     { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/tamilsiraggugal/" },
     { name: "Twitter", icon: Twitter, href: "https://twitter.com" }
   ];
 
@@ -25,10 +25,13 @@ export default function Footer() {
           <div className="footer-section">
             <div className="footer-brand">
               <BookOpen className="brand-icon" />
-              <span className="brand-name">The Tamilsiragu</span>
+              <span className="brand-name"> Tamilsiragu</span>
             </div>
             <p className="footer-description">
-              Where words come alive through passion, creativity, and the timeless beauty of literature. Join us in celebrating the art of storytelling.
+             ஆயிரம் ஆண்டுகள் கடந்தும் அழியாத மொழி தமிழ்,
+             அறிவிலும் அழகிலும் உலகை கவர்ந்த மொழி தமிழ்.
+             தமிழைப் பேசுவது பெருமை அல்ல—பெரும் பக்தி,
+             தலையை உயர்த்தச் செய்யும் எங்கள் தாய்மொழி தமிழ்.
             </p>
           </div>
 
@@ -49,8 +52,8 @@ export default function Footer() {
             <h3 className="footer-heading">Connect With Us</h3>
             <div className="contact-info">
               <Mail className="contact-icon" />
-              <a href="mailto:tamilsiragu@college.edu" className="contact-link">
-                tamilsiragu@college.edu
+              <a href="mailto:tamilsiragu@gmail.com" className="contact-link">
+                tamilsiragu@gmail.com
               </a>
             </div>
             <div className="social-links">
@@ -76,10 +79,10 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © {currentYear} The Tamilsiragu. All rights reserved.
+              © {currentYear}  Tamilsiragu. All rights reserved.
             </p>
             <p className="footer-quote">
-              "Books are a uniquely portable magic." — Stephen King
+              யாதும் ஊரே யாவரும் கேளிர் - கணியன் பூங்குன்றனார்
             </p>
           </div>
         </div>
