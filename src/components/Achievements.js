@@ -23,7 +23,7 @@ export default function Achievements() {
         }
       ]
     },
-    {
+    { 
       year: "2024",
       icon: Award,
       items: [
