@@ -1,61 +1,15 @@
 import React, { useState } from 'react';
 import './TamilSiragu.css';
-
-// Adjust this path based on where this file is.
-// If this file is in src/components, ../Asserts/Test.png is correct.
-// If it is directly in src, use ./Asserts/Test.png.
 import testImage from '../Asserts/Test.png';
 
 const TamilSiraguEvents = () => {
   const [events] = useState([
-    {
-      id: 1,
-      title: "Tamil Literature Workshop",
-      date: "October 15, 2024",
-      description: "An interactive workshop exploring classical Tamil poetry and literature with renowned scholars.",
-      participants: 45,
-      image: testImage
-    },
-    {
-      id: 2,
-      title: "Cultural Dance Performance",
-      date: "September 22, 2024",
-      description: "Traditional Tamil dance performances showcasing the beauty of Bharatanatyam.",
-      participants: 60,
-      image: testImage
-    },
-    {
-      id: 3,
-      title: "Tamil Language Day Celebration",
-      date: "August 18, 2024",
-      description: "Celebrating the richness of Tamil language with debates, speeches, and cultural programs.",
-      participants: 80,
-      image: testImage
-    },
-    {
-      id: 4,
-      title: "Heritage Walk - Temples Tour",
-      date: "July 10, 2024",
-      description: "Educational tour of historical Tamil temples exploring ancient architecture and heritage.",
-      participants: 35,
-      image: testImage
-    },
-    {
-      id: 5,
-      title: "Traditional Music Concert",
-      date: "June 5, 2024",
-      description: "Carnatic music concert featuring renowned Tamil musicians and traditional instruments.",
-      participants: 120,
-      image: testImage
-    },
-    {
-      id: 6,
-      title: "Poetry Recitation Contest",
-      date: "May 20, 2024",
-      description: "Students competed in reciting classical and contemporary Tamil poetry with passion.",
-      participants: 50,
-      image: testImage
-    }
+    { id: 1, title: "Tamil Literature Workshop", date: "October 15, 2024", description: "An interactive workshop exploring classical Tamil poetry and literature with renowned scholars.", participants: 45, image: testImage },
+    { id: 2, title: "Cultural Dance Performance", date: "September 22, 2024", description: "Traditional Tamil dance performances showcasing the beauty of Bharatanatyam.", participants: 60, image: testImage },
+    { id: 3, title: "Tamil Language Day Celebration", date: "August 18, 2024", description: "Celebrating the richness of Tamil language with debates, speeches, and cultural programs.", participants: 80, image: testImage },
+    { id: 4, title: "Heritage Walk - Temples Tour", date: "July 10, 2024", description: "Educational tour of historical Tamil temples exploring ancient architecture and heritage.", participants: 35, image: testImage },
+    { id: 5, title: "Traditional Music Concert", date: "June 5, 2024", description: "Carnatic music concert featuring renowned Tamil musicians and traditional instruments.", participants: 120, image: testImage },
+    { id: 6, title: "Poetry Recitation Contest", date: "May 20, 2024", description: "Students competed in reciting classical and contemporary Tamil poetry with passion.", participants: 50, image: testImage }
   ]);
 
   return (
@@ -115,10 +69,7 @@ const TamilSiraguEvents = () => {
                     src={event.image}
                     alt={event.title}
                     className="event-image"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = testImage;
-                    }}
+                    onError={(e) => { e.target.onerror = null; e.target.src = testImage; }}
                   />
                   <div className="event-content">
                     <div className="event-header">
@@ -127,7 +78,7 @@ const TamilSiraguEvents = () => {
                     </div>
                     <p className="event-description">{event.description}</p>
                     <div className="event-footer">
-                      <div className="participants">
+                      <div className="participants" title={`${event.participants} participants`}>
                         <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                           <circle cx="9" cy="7" r="4"></circle>

@@ -15,7 +15,6 @@ body {
   background-color: #fafafa;
 }
 
-/* Header Styles */
 .header {
   background: linear-gradient(135deg, #000000 0%, #2a2a2a 100%);
   padding: 4rem 2rem 3rem;
@@ -27,10 +26,7 @@ body {
 .header::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.02)" width="100" height="100"/></svg>');
   pointer-events: none;
 }
@@ -44,50 +40,39 @@ body {
 
 .logo-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
 .wing-left,
 .wing-right {
   font-size: 2rem;
-  color: #ffffff;
+  color: #fff;
   opacity: 0.6;
   animation: sparkle 2s ease-in-out infinite;
 }
 
-.wing-left {
-  animation-delay: 0s;
-}
-
-.wing-right {
-  animation-delay: 1s;
-}
+.wing-left { animation-delay: 0s; }
+.wing-right { animation-delay: 1s; }
 
 @keyframes sparkle {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
 .club-name {
-  font-size: 3.8rem; /* bigger */
+  font-size: 3.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 2px;
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 2px 10px rgba(255,255,255,0.2);
 }
 
 .club-subtitle {
   font-size: 1.5rem;
-  color: #cccccc;
+  color: #ccc;
   font-weight: 300;
   letter-spacing: 3px;
   margin-bottom: 1rem;
@@ -102,14 +87,12 @@ body {
   font-style: italic;
 }
 
-/* Main Content */
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2.5rem; /* a bit more */
+  padding: 4rem 2.5rem;
 }
 
-/* Stats Section */
 .stats-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -119,12 +102,20 @@ body {
 }
 
 .stat-card {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 2.2rem 1.8rem; /* bigger */
+  padding: 2.2rem 1.8rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  border-color: #333;
+  cursor: pointer;
 }
 
 .stat-icon {
@@ -133,21 +124,20 @@ body {
 }
 
 .stat-number {
-  font-size: 2.7rem; /* bigger */
+  font-size: 2.7rem;
   font-weight: 700;
-  color: #000000;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
+  color: #666;
   font-size: 0.95rem;
-  color: #666666;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
-/* Events Section */
 .events-section {
   margin-top: 4rem;
 }
@@ -158,9 +148,9 @@ body {
 }
 
 .section-title {
-  font-size: 2.7rem; /* bigger */
-  color: #000000;
+  font-size: 2.7rem;
   font-weight: 700;
+  color: #000;
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
@@ -168,7 +158,7 @@ body {
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #000000, transparent);
+  background: linear-gradient(90deg, transparent, #000, transparent);
   margin: 0 auto;
 }
 
@@ -206,7 +196,7 @@ body {
   top: 50%;
   width: 16px;
   height: 16px;
-  background: #000000;
+  background: #000;
   border: 4px solid #fafafa;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -215,34 +205,33 @@ body {
 }
 
 .event-card {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 18px; /* slightly larger */
+  border-radius: 18px;
   padding: 0;
-  width: calc(50% - 2.5rem); /* slightly wider */
+  width: calc(50% - 2.5rem);
   position: relative;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  border-color: #000;
+  cursor: pointer;
 }
 
-.event-item.right .event-card {
-  margin-left: 3rem;
-}
-
-.event-item.left .event-card {
-  margin-right: 3rem;
-}
-
-/* Image Styling */
 .event-image {
   width: 100%;
-  height: 260px; /* bigger */
+  height: 260px;
   object-fit: cover;
   display: block;
 }
 
 .event-content {
-  padding: 2.2rem; /* a bit more */
+  padding: 2.2rem;
   position: relative;
 }
 
@@ -251,17 +240,23 @@ body {
 }
 
 .event-title {
-  font-size: 1.5rem; /* bigger */
-  color: #000000;
+  font-size: 1.5rem;
+  color: #000;
   margin-bottom: 0.75rem;
   font-weight: 600;
   line-height: 1.3;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+.event-title:hover {
+  color: #007acc;
+  cursor: pointer;
 }
 
 .event-date {
   display: inline-block;
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -270,10 +265,10 @@ body {
 }
 
 .event-description {
-  color: #555555;
+  font-size: 1rem;
+  color: #555;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  font-size: 1rem; /* bigger */
 }
 
 .event-footer {
@@ -282,12 +277,19 @@ body {
 }
 
 .participants {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #333333;
-  font-size: 0.95rem; /* bigger */
+  font-size: 0.95rem;
   font-weight: 500;
+  color: #333;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: default;
+}
+
+.participants:hover svg {
+  stroke: #007acc;
+  transition: stroke 0.3s ease;
+  cursor: pointer;
 }
 
 .icon {
@@ -296,15 +298,22 @@ body {
   stroke-width: 2;
 }
 
-/* Quote Section */
 .quote-section {
-  text-align: center;
+  background: #fff;
   padding: 4rem 2rem;
   margin: 4rem 0;
-  background: #ffffff;
   border-radius: 16px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+  cursor: default;
+}
+
+.quote-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+  cursor: pointer;
 }
 
 .quote-icon {
@@ -313,22 +322,22 @@ body {
 }
 
 .quote-title {
-  font-size: 2.1rem; /* bigger */
-  color: #000000;
-  margin-bottom: 1rem;
+  font-size: 2.1rem;
   font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
 
 .quote-text {
-  color: #666666;
+  font-size: 1.05rem;
+  color: #666;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
-  font-size: 1.05rem;
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .club-name {
     font-size: 2.7rem;
@@ -370,7 +379,7 @@ body {
   }
 
   .event-image {
-    height: 220px; /* bigger on mobile too */
+    height: 220px;
   }
 
   .section-title {
@@ -383,7 +392,7 @@ body {
 }
 
 .footer a:focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid #fff;
   outline-offset: 4px;
   border-radius: 4px;
 }
