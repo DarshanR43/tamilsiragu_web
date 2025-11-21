@@ -29,29 +29,6 @@ const TamilSiraguEvents = () => {
       </header>
 
       <main className="main-content">
-        <div className="stats-section">
-          <div className="stat-card">
-            <div className="stat-icon">🏆</div>
-            <div className="stat-number">6</div>
-            <div className="stat-label">Events</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">👥</div>
-            <div className="stat-number">390</div>
-            <div className="stat-label">Total Participants</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">📅</div>
-            <div className="stat-number">2024</div>
-            <div className="stat-label">Active Year</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">⭐</div>
-            <div className="stat-number">100%</div>
-            <div className="stat-label">Success Rate</div>
-          </div>
-        </div>
-
         <section className="events-section">
           <div className="section-header">
             <h2 className="section-title">Our Achievements</h2>
