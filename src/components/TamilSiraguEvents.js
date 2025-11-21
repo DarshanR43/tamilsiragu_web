@@ -23,7 +23,7 @@ const TamilSiraguEvents = () => {
           </div>
           <p className="club-subtitle">Tamil Siragu</p>
           <p className="tagline">
-            A journey of literary excellence, marked by dedication, creativity, and a passion for the world
+            தமிழால் இணைந்தோம்
           </p>
         </div>
       </header>
@@ -76,8 +76,10 @@ const TamilSiraguEvents = () => {
           <div className="quote-icon">🏆</div>
           <h2 className="quote-title">Be Part of Our Success Story</h2>
           <p className="quote-text">
-            Join us in celebrating Tamil culture and heritage. Your participation helps us create history
-            in the world of literature, dance and every field we touch at SVCE College.
+            தமிழ் பண்பாட்டின் ஒளியை உலகிற்கு காட்ட எங்களுடன் இணைந்திடுங்கள்.
+            உங்கள் ஒரு படி, இலக்கியம், நடனம், கலை—எங்கள் SVCE தொடும்
+            ஒவ்வொரு துறையிலும் புதிய வரலாறு எழுதும் சக்தியாகிறது.
+            நாம் சேர்ந்து தமிழ் பெருமையை உயர்த்திடலாம்!
           </p>
         </section>
       </main>
