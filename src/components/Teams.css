@@ -1,0 +1,115 @@
+/* App Container */
+.app-container {
+  background-color: #2C3E50;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.title {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Card */
+.card {
+  width: 230px;
+  height: 360px;
+  background-color: rgb(31, 42, 68);
+  border: 2px solid black;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+/* --- Simplified Hover Effects --- */
+.card-hover-teacher {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35); /* soft gold shadow */
+}
+
+.card-hover-student {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(135, 206, 250, 0.35); /* soft skyblue shadow */
+}
+
+/* Card Photo */
+.card-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid black;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+}
+
+.card-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card Name */
+.card-name {
+  position: absolute;
+  bottom: 120px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Card Role */
+.card-role {
+  position: absolute;
+  bottom: 90px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Card ID */
+.card-id {
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Card Icons */
+.card-icons {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Teachers Grid */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+
+/* Students Grid */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 90%;
+  max-width: 900px;
+}

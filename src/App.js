@@ -2,6 +2,7 @@ import React from 'react';
 import Events from './components/TamilSiraguEvents';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Teams from './components/Teams';
 import './App.css';
 
 function App() {

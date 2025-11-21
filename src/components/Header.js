@@ -32,7 +32,7 @@ const Header = () => {
             <a href="#home" className="navbar-link">Home</a>
           </li>
           <li className="navbar-item">
-            <a href="#team" className="navbar-link">Meet Our Team</a>
+            <a href="Teams.js" className="navbar-link">Meet Our Team</a>
           </li>
           <li className="navbar-item">
             <a href="events.js" className="navbar-link">Events</a>
