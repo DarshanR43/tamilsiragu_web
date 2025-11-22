@@ -3,6 +3,7 @@ import Events from './components/TamilSiraguEvents';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Teams from './components/Teams';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <Header/>
       <Events />
       <Footer/>
+      <Teams/>
+      <Home></Home>
     </div>
   );
 }
